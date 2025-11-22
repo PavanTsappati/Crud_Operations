@@ -1,54 +1,43 @@
-# CRUD Operations – Java + JDBC + MySQL Project
+# 📌 CRUD Application – Spring Boot + MySQL
 
-A simple and beginner-friendly **CRUD (Create, Read, Update, Delete)** console application developed using **Java, JDBC, and MySQL**.  
-This project helps users manage employee records through a command-line interface.
+A simple and clean **CRUD (Create, Read, Update, Delete)** web application built using **Spring Boot, Spring Data JPA, Hibernate, and MySQL**, along with a **HTML, CSS, and JavaScript UI**.
+
+It allows users to add, update, view, and delete records through a responsive and user-friendly web interface.
 
 ---
 
-## 📸 Project Preview
+## 📸 Application Preview
 
 <p align="center">
-  <img src="Crud Page.png" width="550">
+  <img src="Crud Page.png" width="600">
 </p>
 
-> 🔧 After uploading the image to GitHub, click the image → copy **RAW link** → replace the image URL above.
+> 🔧 After uploading the image to GitHub:  
+Click image → **Open Raw** → Copy URL → Replace above link.
 
 ---
 
-## 🔥 Features
+## 🚀 Features
 
-✔ Add new employee  
-✔ View employee list  
-✔ Update employee details  
-✔ Delete employee record  
-✔ Prevents duplicate entry based on ID  
-✔ Console-based user interface  
-
----
-
-## 🛠️ Technologies Used
-
-| Technology | Purpose |
-|-----------|---------|
-| Java | Core logic |
-| JDBC | Database connectivity |
-| MySQL | Persistent data storage |
-| Eclipse | Development environment |
+✔ Add new records  
+✔ Display stored records in a dynamic table  
+✔ Edit and update existing records  
+✔ Delete individual records  
+✔ Form validations & clean UI  
+✔ Fully connected with MySQL using Spring Data JPA  
 
 ---
 
-## 📌 How the System Works
+## 🛠 Technologies Used
 
-1️⃣ User launches the program  
-2️⃣ Console displays menu with options:
-- Add Employee  
-- View Employees  
-- Update Employee  
-- Delete Employee  
-- Exit  
-
-3️⃣ Based on user input, database operations execute using JDBC  
-4️⃣ Data is stored and updated securely in MySQL  
+| Layer | Technology |
+|-------|------------|
+| Backend | Spring Boot |
+| ORM | Hibernate + Spring Data JPA |
+| Database | MySQL |
+| Frontend UI | **HTML, CSS, JavaScript** |
+| Build Tool | Maven |
+| IDE | IntelliJ / Eclipse / VS Code |
 
 ---
 
@@ -56,13 +45,18 @@ This project helps users manage employee records through a command-line interfac
 
 ```
 Crud_Operations-main
-├── src
-│   ├── Main.java
-│   ├── Employee.java
-│   ├── DBConnection.java
-│   └── EmployeeService.java
-├── crud.sql
-└── README.md
+ ┣ src
+ ┃ ┣ main
+ ┃ ┃ ┣ java/com/example/crud
+ ┃ ┃ ┃ ┣ controller
+ ┃ ┃ ┃ ┣ entity
+ ┃ ┃ ┃ ┣ repository
+ ┃ ┃ ┃ ┗ service
+ ┃ ┃ ┣ resources
+ ┃ ┃ ┃ ┣ static (HTML, CSS, JS files)
+ ┃ ┃ ┃ ┗ application.properties
+ ┣ pom.xml
+ ┗ README.md
 ```
 
 ---
@@ -82,30 +76,51 @@ cd Crud_Operations-main
 CREATE DATABASE crud_app;
 ```
 
-### 3️⃣ Update Database Credentials in Code
+### 3️⃣ Update Database Credentials
 
-```java
-String url = "jdbc:mysql://localhost:3306/crud_app";
-String username = "root";
-String password = "YOUR_PASSWORD";
+In `application.properties`:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/crud_app
+spring.datasource.username=root
+spring.datasource.password=YOUR_PASSWORD
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
 ```
 
-### 4️⃣ Run the Application
+### 4️⃣ Run the Project
 
-Execute `Main.java` from your IDE (Eclipse/IntelliJ/VS Code).
+```sh
+mvn spring-boot:run
+```
+
+Or run from your IDE.
 
 ---
 
-## 🚀 Future Enhancements
+## ▶️ How to Use
 
-🔹 File-based logging  
-🔹 GUI (Swing or JavaFX)  
-🔹 Authentication system  
-🔹 Deploy as REST API with Spring Boot  
+| Action | How |
+|--------|-----|
+| Add Data | Fill form → Click **Add** |
+| Edit Data | Click **Edit** next to record |
+| Save Update | Modify fields → Click **Update** |
+| Delete | Click **Delete** |
+
+---
+
+## 🎯 Future Improvements
+
+🔹 Authentication (Login system)  
+🔹 Pagination & Search filter  
+🔹 Deploy online (Render/Railway/AWS)  
+🔹 Upgrade UI to React or Angular  
 
 ---
 
 ### ⭐ Support
 
-If you found this project useful, consider ⭐ starring the repository!
+If this project helped you, please **⭐ star the repository**!
+
+---
 
