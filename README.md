@@ -12,8 +12,7 @@ It allows users to add, update, view, and delete records through a responsive an
   <img src="Crud Page.png" width="600">
 </p>
 
-> 🔧 After uploading the image to GitHub:  
-Click image → **Open Raw** → Copy URL → Replace above link.
+> 
 
 ---
 
@@ -37,7 +36,7 @@ Click image → **Open Raw** → Copy URL → Replace above link.
 | Database | MySQL |
 | Frontend UI | **HTML, CSS, JavaScript** |
 | Build Tool | Maven |
-| IDE | IntelliJ / Eclipse / VS Code |
+| IDE | IntelliJ |
 
 ---
 
@@ -66,7 +65,7 @@ Crud_Operations-main
 ### 1️⃣ Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/Crud_Operations-main.git
+git clone https://github.com/PavanTsappati/Crud_Operations-main.git
 cd Crud_Operations-main
 ```
 
