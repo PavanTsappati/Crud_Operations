@@ -4,7 +4,6 @@ import com.CRUD.Crud_Operations.Entity.Product;
 import com.CRUD.Crud_Operations.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -13,10 +12,10 @@ public class ProductController {
     @Autowired
     private ProductService service;
 
-    // Root endpoint
+    // ROOT URL -> redirect to index.html (frontend)
     @GetMapping("/")
-    public String root() {
-        return "Welcome to Product API! Try /products for all products.";
+    public String home() {
+        return "<script>window.location.href='/index.html';</script>";
     }
 
     @PostMapping("/addProduct")
