@@ -1,14 +1,17 @@
-# CRUD Operations – Spring Boot + JSP Project
+# CRUD Operations – Java + JDBC + MySQL Project
 
-A simple and beginner-friendly **CRUD (Create, Read, Update, Delete)** web application built using **Spring Boot, JSP, JPA/Hibernate, and MySQL**.  
-This project allows users to manage employee data with features like add, edit, display, and delete.
+A simple and beginner-friendly **CRUD (Create, Read, Update, Delete)** console application developed using **Java, JDBC, and MySQL**.  
+This project helps users manage employee records through a command-line interface.
 
 ---
 
 ## 📸 Project Preview
 
-> *(Upload the image in GitHub and replace the link below)*  
-`![Application Screenshot](IMAGE_URL_HERE)`
+<p align="center">
+  <img src="Crud Page.png" width="550">
+</p>
+
+> 🔧 After uploading the image to GitHub, click the image → copy **RAW link** → replace the image URL above.
 
 ---
 
@@ -17,21 +20,35 @@ This project allows users to manage employee data with features like add, edit, 
 ✔ Add new employee  
 ✔ View employee list  
 ✔ Update employee details  
-✔ Delete employees  
-✔ User-friendly JSP UI  
-✔ Uses MySQL database with Hibernate/JPA  
+✔ Delete employee record  
+✔ Prevents duplicate entry based on ID  
+✔ Console-based user interface  
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technologies Used
 
-| Category | Technologies |
-|----------|-------------|
-| Backend | Spring Boot |
-| Frontend | JSP, HTML, CSS, Bootstrap |
-| Database | MySQL |
-| ORM | Hibernate / JPA |
-| Build Tool | Maven |
+| Technology | Purpose |
+|-----------|---------|
+| Java | Core logic |
+| JDBC | Database connectivity |
+| MySQL | Persistent data storage |
+| Eclipse | Development environment |
+
+---
+
+## 📌 How the System Works
+
+1️⃣ User launches the program  
+2️⃣ Console displays menu with options:
+- Add Employee  
+- View Employees  
+- Update Employee  
+- Delete Employee  
+- Exit  
+
+3️⃣ Based on user input, database operations execute using JDBC  
+4️⃣ Data is stored and updated securely in MySQL  
 
 ---
 
@@ -39,24 +56,18 @@ This project allows users to manage employee data with features like add, edit, 
 
 ```
 Crud_Operations-main
- ┣ src
- ┃ ┣ main
- ┃ ┃ ┣ java
- ┃ ┃ ┃ ┗ com.example.crud
- ┃ ┃ ┃ ┃ ┣ controller
- ┃ ┃ ┃ ┃ ┣ entity
- ┃ ┃ ┃ ┃ ┣ repository
- ┃ ┃ ┃ ┃ ┗ service
- ┃ ┃ ┣ resources
- ┃ ┃ ┃ ┣ application.properties
- ┃ ┃ ┃ ┗ templates (JSP pages)
- ┣ pom.xml
- ┗ README.md
+├── src
+│   ├── Main.java
+│   ├── Employee.java
+│   ├── DBConnection.java
+│   └── EmployeeService.java
+├── crud.sql
+└── README.md
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙️ Setup & Installation
 
 ### 1️⃣ Clone the Repository
 
@@ -71,54 +82,30 @@ cd Crud_Operations-main
 CREATE DATABASE crud_app;
 ```
 
-### 3️⃣ Configure Database in `application.properties`
+### 3️⃣ Update Database Credentials in Code
 
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/crud_app
-spring.datasource.username=root
-spring.datasource.password=YOUR_PASSWORD
-spring.jpa.hibernate.ddl-auto=update
+```java
+String url = "jdbc:mysql://localhost:3306/crud_app";
+String username = "root";
+String password = "YOUR_PASSWORD";
 ```
 
-### 4️⃣ Run the Project
+### 4️⃣ Run the Application
 
-```sh
-mvn spring-boot:run
-```
+Execute `Main.java` from your IDE (Eclipse/IntelliJ/VS Code).
 
 ---
 
-## ▶️ How to Use
+## 🚀 Future Enhancements
 
-| Action | Path |
-|--------|------|
-| Home Page | `/` |
-| Add Employee | `/add` |
-| View Employees | `/list` |
-| Edit/Update | `/edit/{id}` |
-| Delete | `/delete/{id}` |
+🔹 File-based logging  
+🔹 GUI (Swing or JavaFX)  
+🔹 Authentication system  
+🔹 Deploy as REST API with Spring Boot  
 
 ---
 
-## 📝 Future Enhancements
+### ⭐ Support
 
-🔹 Login & Authentication  
-🔹 Pagination & Search  
-🔹 Deploy on Render / Railway / AWS  
-
----
-
-## 🙌 Contributing
-
-Feel free to fork the repo, improve features, and submit a pull request.
-
----
-
-## 📄 License
-
-This project is open-source and available under the **MIT License**.
-
----
-
-### ⭐ If you like this project, give it a star on GitHub!
+If you found this project useful, consider ⭐ starring the repository!
 
